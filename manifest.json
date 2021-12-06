@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Darkmode",
+  "version": "1.0",
+  "description": "description.",
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["/assets/js/content.js"]
+    }
+  ],
+  "content_security_policy": "script-src 'self' 'wasm-eval'; object-src 'none'",
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "incognito": "spanning"
+}
